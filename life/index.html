@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insurance Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="body-container">
+    <div class="form-container">
+      <h1 class="heading">Family Insurance Quotation</h1>
+      <form action="" id="formInsurance">
+        <div class="form-grid">
+          <label for="statusType">Marital Status:</label>
+          <select name="statusType" id="statusType">
+            <option value="select">...Select Marital Status...</option>
+            <option value="single">Single</option>
+            <option value="married">Married</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="numberOfChildren">Number of Children:</label>
+          <input type="number" id="numberOfChildren" min="0">
+    
+          <label for="numberOfDirectParents">Number of Direct Parents:</label>
+          <select name="name" id="numberOfDirectParents">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+    
+          <label for="numberOfDirectParentsInLaw">Number of Direct Parents-in-law:</label> 
+          <select name="name" id="numberOfDirectParentsInLaw">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+    
+          <label for="categoryType">Category Type:</label>
+          <select id="categoryType"></select>
+        </div>
+      </form>
+    </div>
+    <div class="premium-table">
+      <h1 class="heaing">Insurance Premium</h1>
+      <table class="data-table" id="premiumTable">      
+        <thead>
+          <tr>
+            <th>Premium</th>
+            <th>Monthly</th>
+            <th>Annual</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Risk Premium</td>
+            <td id="riskPremiumMonthly"></td>
+            <td id="riskPremiumAnnual"></td>
+          </tr>
+          <tr>
+            <td>Saving Premium</td>
+            <td id="savingPremiumMonthly"></td>
+            <td id="savingPremiumAnnual"></td>
+          </tr>
+          <tr>
+            <td>Total Premium</td>
+            <td id="totalPremiumMonthly"></td>
+            <td id="totalPremiumAnnual"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-container">
+      <div>
+        <h1 class="heading">Insurance Cover</h1>
+      </div>
+       <div id="dataContainer"></div>
+      <div>
+        <h1 class="heading">Premium Data</h1>
+      </div>
+      <div id="additionalDataContainer"></div>  
+    </div><br>
+    <div style="text-align: center;">
+      <label for="showAdditionalData">Show Premium Data:</label>
+      <input type="checkbox" id="showAdditionalData" checked>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
